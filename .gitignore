@@ -92,8 +92,8 @@ ENV/
 .spyproject
 
 # Visual Studio project settings
-.pyproj
-.sln
+*.pyproj
+*.sln
 
 # Rope project settings
 .ropeproject
