@@ -97,6 +97,9 @@ ENV/
 .vs/
 data/
 
+# data files
+data/
+
 # Rope project settings
 .ropeproject
 
