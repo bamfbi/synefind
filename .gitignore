@@ -96,6 +96,9 @@ ENV/
 *.sln
 .vs/
 
+# data files
+data/
+
 # Rope project settings
 .ropeproject
 
