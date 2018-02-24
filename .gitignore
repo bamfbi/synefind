@@ -93,6 +93,7 @@ ENV/
 
 # Visual Studio project settings
 .pyproj
+.sln
 
 # Rope project settings
 .ropeproject
