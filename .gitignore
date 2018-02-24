@@ -95,6 +95,7 @@ ENV/
 *.pyproj
 *.sln
 .vs/
+data/
 
 # Rope project settings
 .ropeproject
