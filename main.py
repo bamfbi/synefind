@@ -1,8 +1,13 @@
 import numpy as np
 import scipy
-from pyAudioAnalysis import audioAnalysis, analyzeMovieSound
+from pyAudioAnalysis import audioAnalysis, audioBasicIO
 import matplotlib.pyplot as plt
-help(audioAnalysis)
+
+a, b = audioBasicIO.readAudioFile("data/wav2.WAV")
+print a
+print b
+plt.plot(np.arange(0, np.size(b), 1), b)
+plt.show()
 
 #[Fs, x] = audioBasicIO.readAudioFile("thunder_strike_3-Mike_Koenig-853886140.wav");
 #F = audioFeatureExtraction.stFeatureExtraction(x, Fs, 0.050*Fs, 0.025*Fs);
