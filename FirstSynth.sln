@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuceDemoPlugin_StandalonePlugin", "..\..\JUCE\examples\audio plugin demo\Builds\VisualStudio2017\JuceDemoPlugin_StandalonePlugin.vcxproj", "{DF786751-7581-02E8-2BB4-E217CD55C907}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372} = {1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuceDemoPlugin_VST", "..\..\JUCE\examples\audio plugin demo\Builds\VisualStudio2017\JuceDemoPlugin_VST.vcxproj", "{D82A1FD0-FB5C-8174-477C-8EF5CA51D2A8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372} = {1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JuceDemoPlugin_SharedCode", "..\..\JUCE\examples\audio plugin demo\Builds\VisualStudio2017\JuceDemoPlugin_SharedCode.vcxproj", "{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF786751-7581-02E8-2BB4-E217CD55C907}.Debug|x64.ActiveCfg = Debug|x64
+		{DF786751-7581-02E8-2BB4-E217CD55C907}.Debug|x64.Build.0 = Debug|x64
+		{DF786751-7581-02E8-2BB4-E217CD55C907}.Release|x64.ActiveCfg = Release|x64
+		{DF786751-7581-02E8-2BB4-E217CD55C907}.Release|x64.Build.0 = Release|x64
+		{D82A1FD0-FB5C-8174-477C-8EF5CA51D2A8}.Debug|x64.ActiveCfg = Debug|x64
+		{D82A1FD0-FB5C-8174-477C-8EF5CA51D2A8}.Debug|x64.Build.0 = Debug|x64
+		{D82A1FD0-FB5C-8174-477C-8EF5CA51D2A8}.Release|x64.ActiveCfg = Release|x64
+		{D82A1FD0-FB5C-8174-477C-8EF5CA51D2A8}.Release|x64.Build.0 = Release|x64
+		{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}.Debug|x64.ActiveCfg = Debug|x64
+		{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}.Debug|x64.Build.0 = Debug|x64
+		{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}.Release|x64.ActiveCfg = Release|x64
+		{1AB90829-CCC5-D7C1-BC4A-70C8D3DAD372}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24F2D0D5-9196-4341-AE6C-3894B76B4D90}
+	EndGlobalSection
+EndGlobal

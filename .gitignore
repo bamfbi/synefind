@@ -93,7 +93,6 @@ ENV/
 
 # Visual Studio project settings
 *.pyproj
-*.sln
 .vs/
 data/
 
