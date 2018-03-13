@@ -2310,7 +2310,10 @@
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>synefind\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\SinewaveSynth.h">
+    <ClInclude Include="..\..\Source\SynthSound.h">
+      <Filter>synefind\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SynthVoice.h">
       <Filter>synefind\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Libraries\Maximilian\libs\fft.h">

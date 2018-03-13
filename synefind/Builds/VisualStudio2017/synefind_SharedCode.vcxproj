@@ -14,7 +14,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C027A3C6-4411-E14C-AC49-736DF002D685}</ProjectGuid>
+    <ProjectGuid>{8923CEDA-619C-871F-083B-1F7FE432BDBA}</ProjectGuid>
     <PlatformToolset>v141</PlatformToolset>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -1877,7 +1877,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
-    <ClInclude Include="..\..\Source\SinewaveSynth.h"/>
+    <ClInclude Include="..\..\Source\SynthSound.h"/>
+    <ClInclude Include="..\..\Source\SynthVoice.h"/>
     <ClInclude Include="..\..\..\..\..\Libraries\Maximilian\libs\fft.h"/>
     <ClInclude Include="..\..\..\..\..\Libraries\Maximilian\libs\maxiAtoms.h"/>
     <ClInclude Include="..\..\..\..\..\Libraries\Maximilian\libs\maxiBark.h"/>

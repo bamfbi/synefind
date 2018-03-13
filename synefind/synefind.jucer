@@ -2,7 +2,8 @@
 
 <JUCERPROJECT name="synefind" projectType="audioplug" buildStandalone="1" jucerVersion="5.2.1"
               pluginIsSynth="1" pluginWantsMidiIn="1" pluginProducesMidiOut="1"
-              pluginEditorRequiresKeys="1" cppLanguageStandard="11">
+              pluginEditorRequiresKeys="1" cppLanguageStandard="11" buildAU="0"
+              buildVST3="0">
   <MAINGROUP id="cRIVjc" name="synefind">
     <GROUP id="{30B97246-4166-7665-AE58-C61F6A06F1E4}" name="Source">
       <FILE id="W60XJ7" name="PluginEditor.cpp" compile="1" resource="0"
@@ -12,7 +13,8 @@
             file="Source/PluginProcessor.cpp"/>
       <FILE id="VFKX58" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="QznYsx" name="SinewaveSynth.h" compile="0" resource="0" file="Source/SinewaveSynth.h"/>
+      <FILE id="rgVaxv" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+      <FILE id="MXfFNv" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
     </GROUP>
     <GROUP id="{706DD3AB-B30B-88C2-1D84-2CA0164F8C59}" name="Maximilian">
       <GROUP id="{48BB61FB-2AEB-C617-402C-C6977012977D}" name="libs">
