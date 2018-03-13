@@ -14,6 +14,10 @@ public:
         return dynamic_cast <SynthSound*>(sound) != nullptr;
     }
 
+    void getParam(float* attack)
+    {
+        env1.setAttack(double(*attack));
+    }
     //=======================================================
 
     void startNote(int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition) override
@@ -52,20 +56,21 @@ public:
 
     void renderNextBlock(AudioBuffer <float> &outputBuffer, int startSample, int numSamples) override
     {
-        env1.setAttack(20);
+        env1.setAttack(500);
         env1.setDecay(500);
         env1.setSustain(0.8);
         env1.setRelease(500);
+        double theWave, envelopedWave, filteredWave;
 
         for (int sample = 0; sample < numSamples; ++sample)
         {
-            double theWave = osc1.saw(frequency);
-            double theSound = env1.adsr(theWave, env1.trigger) * level;
-            double filteredSound = filter1.lores(theSound, 1000, 0.1);
+            theWave = osc1.sinewave(frequency) + osc2.sinewave(frequency * 1.5);
+            envelopedWave = env1.adsr(theWave, env1.trigger) * level;
+            filteredWave = filter1.lores(envelopedWave, 1000, 0.0);
 
             for (int channel = 0; channel < outputBuffer.getNumChannels(); ++channel)
             {
-                outputBuffer.addSample(channel, startSample, filteredSound);
+                outputBuffer.addSample(channel, startSample, envelopedWave);
             }
             ++startSample;
         }
@@ -77,9 +82,11 @@ private:
     double frequency;
 
     maxiOsc osc1;
+    maxiOsc osc2;
     maxiEnv env1;
+    maxiEnv env2;
     maxiFilter filter1;
-
+    maxiFilter filter2;
 
 
 };
