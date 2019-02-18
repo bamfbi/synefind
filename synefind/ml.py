@@ -1,4 +1,3 @@
-
 class autoencoder:
 
     def __init__(

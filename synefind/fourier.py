@@ -1,7 +1,5 @@
 
 
-
-
 class fourier_analyzer:
     """
     Fourier analysis object class.
