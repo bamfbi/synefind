@@ -4,8 +4,8 @@ an extremely WIP utility for making it easier to track down synthesizer paramete
 
 Luc Le Pottier (University of Michigan; CERN ATLAS group) <br> 
 Aaron Willette (University of Michigan) <br>
-Murali (University of D.Z. nts) <br> 
-Alex (University of CAN Doffts) <br> 
+Murali Saravanan (Cornell University; CERN CMS group) <br>
+Alex Meith (University of Michigan; CERN CMS group) <br> 
 
 ## importing
 
