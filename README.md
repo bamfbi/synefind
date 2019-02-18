@@ -1,6 +1,7 @@
 # synefind
 
-an extremely WIP utility for making it easier to track down synthesizer parameters on rippin' solos.    
+an extremely WIP utility for making it easier to track down synthesizer parameters on rippin' solos.   
+**please read [architecture description](../blob/master/architecture.md) for details on general project idea**
 
 Luc Le Pottier (University of Michigan; CERN ATLAS group) <br> 
 Aaron Willette (University of Michigan) <br>
