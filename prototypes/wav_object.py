@@ -1,11 +1,18 @@
 import random
 from scipy.io.wavfile import read as wav_read, write as wav_write
+<<<<<<< HEAD
 from scipy import hanning, zeros, real
+=======
+>>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
 import numpy as np 
 import matplotlib.pyplot as plt
 import matplotlib.colors as pltclr
 import matplotlib.gridspec as gridspec
+<<<<<<< HEAD
 from scipy.signal import spectrogram, stft, istft
+=======
+from scipy.signal import spectrogram
+>>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
 import keras
 import os 
 import traceback as tb
@@ -54,6 +61,7 @@ class wav(object):
     ):
         return wav(np.fft.irfft(self.data, axis=0))
 
+<<<<<<< HEAD
 
     def stft(
         self,
@@ -92,6 +100,8 @@ class wav(object):
         return [wav(reps.T[:,index_sum[i]:index_sum[i+1]]) for i in range(len(index))]
 
 
+=======
+>>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
     def get_plotinfo(
         self,
         subset=None,
@@ -144,7 +154,11 @@ class wav(object):
         plot_log=True,
     ):
         f,t,Sxx = spectrogram(self.data.mean(axis=1), fs=self.sample_rate, return_onesided=one_sided)
+<<<<<<< HEAD
         return (t,f if one_sided else np.fft.fftfshift(f), Sxx if one_sided else np.fft.fftshift(Sxx, axes=0)), {'cmap': cmap, 'norm': pltclr.LogNorm() if plot_log else None}
+=======
+        return (t,f if one_sided else np.fft.fftshift(f), Sxx if one_sided else np.fft.fftshift(Sxx, axes=0)), {'cmap': cmap, 'norm': pltclr.LogNorm() if plot_log else None}
+>>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
 
     def spec(
         self,
@@ -315,6 +329,10 @@ class wav(object):
         **kwargs,
     ):
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
         # single channel, cleanup
         data = wav.clean_dataset(wavs,threshold=threshold,slice_=slice_)
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from wav_object import *
 import glob
 
@@ -54,3 +55,13 @@ def wav_from_rep(
     proc = (proc[0] + 1j*proc[1])
     proc = np.repeat(np.asarray([proc]), int(n_samples/proc.size), axis=0)
     return wav(istft(proc, fs=wav.DEFAULT_SAMPLE_RATE)[1])
+=======
+from wav_object import wav
+import os 
+
+w = wav(".data/samples/Synth-BloemAir")
+
+w.plot()
+
+w.spec()
+>>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
