@@ -16,12 +16,8 @@ def autoencode(
     batch_size=1,
     neck_dim=2,
     intermediate_dims=[], 
-<<<<<<< HEAD
     validation_split=0.3,
     load_if_possible=True,
-=======
-    validation_split=0.3
->>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
 ):
     sample_size,input_size = data.shape
     input_shape = (input_size,)
@@ -60,11 +56,7 @@ def autoencode(
     autoencoder = keras.models.Model(inputs, outputs, name='vae')
     autoencoder.summary()
 
-<<<<<<< HEAD
     loss = keras.losses.mean_squared_error(
-=======
-    loss = keras.losses.mean_squared_logarithmic_error(
->>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
         inputs,
         outputs,
     )
@@ -72,7 +64,6 @@ def autoencode(
     autoencoder.add_loss(loss)
     autoencoder.compile(optimizer='adam')
 
-<<<<<<< HEAD
     npath = '/{}/model.h5'.format(name)
     npath = os.path.abspath(os.curdir) + npath
     if os.path.exists(npath) and load_if_possible:
@@ -89,14 +80,6 @@ def autoencode(
             validation_steps=int(np.ceil(sample_size*validation_split/batch_size))
             )
         autoencoder.save_weights(npath)
-=======
-    npath = '{}.h5'.format(name)
-    # if os.path.exists(npath):
-    #     autoencoder.load_weights(npath)
-    # else:
-    autoencoder.fit(data, epochs=epochs, batch_size=batch_size, verbose=True, validation_split=validation_split)
-    autoencoder.save_weights(npath)
->>>>>>> 651e585ddb3cb519ccfa3f93e12559a1e9302e87
 
     return locals()
 
