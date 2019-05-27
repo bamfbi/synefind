@@ -58,8 +58,9 @@ class wav(object):
     def stft(
         self,
         window_size=1000,
+        window_type="hann"
     ):
-        return stft(self.data.squeeze(), fs=self.sample_rate, nperseg=window_size, padded=True)[2]
+        return stft(self.data.squeeze(), fs=self.sample_rate, nperseg=window_size, padded=True, window=window_type)[2]
 
     @staticmethod
     def prepare_multiple(
@@ -143,7 +144,7 @@ class wav(object):
         plot_log=True,
     ):
         f,t,Sxx = spectrogram(self.data.mean(axis=1), fs=self.sample_rate, return_onesided=one_sided)
-        return (t,f if one_sided else np.fft.fftfshift(f), Sxx if one_sided else np.fft.fftshift(Sxx, axes=0)), {'cmap': cmap, 'norm': pltclr.LogNorm() if plot_log else None}
+        return (t,f, Sxx, {'cmap': cmap, 'norm': pltclr.LogNorm() if plot_log else None})
 
     def spec(
         self,

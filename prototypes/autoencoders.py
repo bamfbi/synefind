@@ -18,6 +18,7 @@ def autoencode(
     intermediate_dims=[], 
     validation_split=0.3,
     load_if_possible=True,
+    callbacks=[],
 ):
     sample_size,input_size = data.shape
     input_shape = (input_size,)
@@ -77,7 +78,8 @@ def autoencode(
             verbose=True,
             validation_split=validation_split,
             steps_per_epoch=int(np.ceil(sample_size*(1-validation_split)/batch_size)),
-            validation_steps=int(np.ceil(sample_size*validation_split/batch_size))
+            validation_steps=int(np.ceil(sample_size*validation_split/batch_size)),
+            callbacks=callbacks
             )
         autoencoder.save_weights(npath)
 

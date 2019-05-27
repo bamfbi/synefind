@@ -12,7 +12,9 @@ def train(
     intermediate_dims=[250, 90],
     validation_split=0.2,
     load_if_possible=True,
+    window='boxcar',
     ):
+    
     fnames = glob.glob(".data/{}".format(sample_prefix))
     wavs = [wav(f) for f in fnames]
 
@@ -40,6 +42,7 @@ def train(
     wavs_recon[4].write("{}/output".format(savename))
     wavs[4].write("{}/input".format(savename))
     locals().update(ret)
+
     return locals()
 
 def wav_from_rep(
@@ -54,3 +57,15 @@ def wav_from_rep(
     proc = (proc[0] + 1j*proc[1])
     proc = np.repeat(np.asarray([proc]), int(n_samples/proc.size), axis=0)
     return wav(istft(proc, fs=wav.DEFAULT_SAMPLE_RATE)[1])
+
+def check_rep(
+    repn,
+    reps,
+    index,
+):
+    reps_recon = wav.reconstruct_reps(reps, index)
+    r0 = reps_recon[repn]
+    for i,elt in enumerate(r0.data):
+        plt.plot(range(len(elt)), i/2 + elt)
+    plt.show()
+    
