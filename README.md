@@ -3,10 +3,6 @@
 an extremely WIP utility for making it easier to track down synthesizer parameters on rippin' solos.   
 **please read [architecture description](../master/architecture.md) for details on general project idea**
 
-Luc Le Pottier (University of Michigan; CERN ATLAS group) <br> 
-Aaron Willette (University of Michigan) <br>
-Murali Saravanan (Cornell University; CERN CMS group) <br>
-Alex Meith (University of Michigan; CERN CMS group) <br> 
 
 ## importing
 
