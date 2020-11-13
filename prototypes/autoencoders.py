@@ -16,8 +16,9 @@ def autoencode(
     batch_size=1,
     neck_dim=2,
     intermediate_dims=[], 
-    validation_split=0.3,
+    validation_split=0.5,
     load_if_possible=True,
+    optimizer='adam',
 ):
     sample_size,input_size = data.shape
     input_shape = (input_size,)
@@ -62,7 +63,7 @@ def autoencode(
     )
 
     autoencoder.add_loss(loss)
-    autoencoder.compile(optimizer='adam')
+    autoencoder.compile(optimizer=optimizer)
 
     npath = '/{}/model.h5'.format(name)
     npath = os.path.abspath(os.curdir) + npath

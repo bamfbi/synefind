@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as pltclr
 import matplotlib.gridspec as gridspec
 from scipy.signal import spectrogram, stft, istft
-import keras
 import os 
 import traceback as tb
 
-from autoencoders import autoencode, autoencode_conv
+# from autoencoders import autoencode, autoencode_conv
+
 
 class wav(object):
     
@@ -262,7 +262,7 @@ class wav(object):
             for i in range(len(wavs)):
                 axes[i].set_title(wav_names[i], fontsize=6)
 
-        plt.show()
+        return plt.gca()
 
     def write(
         self,
@@ -381,7 +381,7 @@ class wav(object):
     def __str__(
         self,
     ):
-        return str(self.data)
+        return 'wav obj. {} samples, {:.3f} seconds'.format(self.size, self.length)
 
     def __repr__(
         self,
